@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P7Y-ux-TLw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dw7-8G-Fua">
+            <objects>
+                <viewController id="P7Y-ux-TLw" customClass="ViewController" customModule="ScalingCarouselExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oa2-KV-nsd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXF-xg-xB9">
+                                <rect key="frame" x="186" y="71" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r32-Jx-drG" customClass="ScalingCarouselView" customModule="ScalingCarousel">
+                                <rect key="frame" x="20" y="498" width="374" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="aME-gR-JPN" userLabel="height = 100"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RYZ-qb-QgT">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OUS-OP-5y9" customClass="Cell" customModule="ScalingCarousel_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MB-Qz-Tlx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="5MB-Qz-Tlx" firstAttribute="width" secondItem="OUS-OP-5y9" secondAttribute="width" id="1V6-yQ-hmI"/>
+                                            <constraint firstItem="5MB-Qz-Tlx" firstAttribute="centerX" secondItem="OUS-OP-5y9" secondAttribute="centerX" id="TIx-Gw-lPy"/>
+                                            <constraint firstItem="5MB-Qz-Tlx" firstAttribute="centerY" secondItem="OUS-OP-5y9" secondAttribute="centerY" id="Vlb-KV-TNc"/>
+                                            <constraint firstItem="5MB-Qz-Tlx" firstAttribute="height" secondItem="OUS-OP-5y9" secondAttribute="height" id="auV-to-9NC"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="mainView" destination="5MB-Qz-Tlx" id="Yxb-jE-QeT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="44"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="P7Y-ux-TLw" id="3mr-vS-6mf"/>
+                                    <outlet property="delegate" destination="P7Y-ux-TLw" id="Iqc-9a-aO8"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P9Z-4N-3cH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BXF-xg-xB9" firstAttribute="top" secondItem="P9Z-4N-3cH" secondAttribute="top" constant="27" id="05k-NI-oEf"/>
+                            <constraint firstItem="P9Z-4N-3cH" firstAttribute="bottom" secondItem="r32-Jx-drG" secondAttribute="bottom" constant="164" id="2Ef-P4-ZoS"/>
+                            <constraint firstItem="r32-Jx-drG" firstAttribute="leading" secondItem="P9Z-4N-3cH" secondAttribute="leading" constant="20" id="80V-dr-gWm"/>
+                            <constraint firstItem="r32-Jx-drG" firstAttribute="trailing" secondItem="Oa2-KV-nsd" secondAttribute="trailingMargin" id="gvf-3t-zyi"/>
+                            <constraint firstItem="r32-Jx-drG" firstAttribute="centerX" secondItem="BXF-xg-xB9" secondAttribute="centerX" id="ttk-H6-Ada"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carousel" destination="r32-Jx-drG" id="SQf-re-WKa"/>
+                        <outlet property="carouselBottomConstraint" destination="2Ef-P4-ZoS" id="SCi-vV-lgd"/>
+                        <outlet property="output" destination="BXF-xg-xB9" id="afj-W7-tLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5V-fp-2wh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.79710144927537" y="-408.48214285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

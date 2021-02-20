@@ -1,0 +1,6 @@
+framework module Pods_ScalingCarouselExample {
+  umbrella header "Pods-ScalingCarouselExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -26,7 +26,7 @@ class ViewController: UIViewController, iCarouselDataSource {
 
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return 3
+        return 10
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
