@@ -10,10 +10,9 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AppAppearance.setupAppearance()
         return true
     }
 
@@ -34,3 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+final class AppAppearance {
+    static func setupAppearance() {
+        UINavigationBar.appearance().backgroundColor = UIColor(named: "mint")
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+}
