@@ -1,0 +1,16 @@
+PODS:
+  - EasyTipView (2.1.0)
+
+DEPENDENCIES:
+  - EasyTipView (~> 2.1)
+
+SPEC REPOS:
+  trunk:
+    - EasyTipView
+
+SPEC CHECKSUMS:
+  EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
+
+PODFILE CHECKSUM: f2fc30137b7a69f5f32d219b437ba7253c319f31
+
+COCOAPODS: 1.11.2
