@@ -16,14 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DsP-rp-usx">
-                                <rect key="frame" x="87" y="286" width="240" height="298"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsP-rp-usx">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Egs-sB-OVr"/>
+                                    <constraint firstAttribute="width" constant="200" id="Nus-lm-de4"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DsP-rp-usx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mMl-dz-BYQ"/>
+                            <constraint firstItem="DsP-rp-usx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdY-sQ-Wzs"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="completeView" destination="DsP-rp-usx" id="Sp6-sq-uga"/>
