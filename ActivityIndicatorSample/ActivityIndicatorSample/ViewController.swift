@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: BaseVC {
     @IBOutlet weak var completeView: UIView!
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,23 +20,26 @@ class ViewController: BaseVC {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             self.activityIndicator.stopAnimating()
             self.completeView.isHidden = false
-            
         }
     }
 }
 
-func setActivityIndicator(view: UIView) -> UIActivityIndicatorView {
-    let activityIndicator = UIActivityIndicatorView()
+class BaseVC: UIViewController {
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        activityIndicator.center = view.center
+        
+        // 기타 옵션
+        activityIndicator.color = .purple
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .medium
+        activityIndicator.stopAnimating()
+        return activityIndicator
+    }()
     
-    activityIndicator.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-    
-    activityIndicator.center = view.center
-    
-    // 기타 옵션
-    activityIndicator.color = .purple
-    activityIndicator.hidesWhenStopped = true
-    activityIndicator.style = .medium
-    
-    activityIndicator.stopAnimating()
-    return activityIndicator
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(activityIndicator)
+    }
 }
