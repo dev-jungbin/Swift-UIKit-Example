@@ -152,8 +152,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="학과를 한줄로 표현한다면?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7B-ye-ksj">
-                                        <rect key="frame" x="20" y="255" width="374" height="59"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="학과를 한줄로 표현한다면?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7B-ye-ksj" customClass="RoundedTextField" customModule="WriteView_Example" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="255" width="374" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -313,6 +313,8 @@
                     <size key="freeformSize" width="414" height="1599"/>
                     <connections>
                         <outlet property="changeMajorBtn" destination="ShX-TK-4tB" id="VL8-Yt-O91"/>
+                        <outlet property="oneLineTextField" destination="q7B-ye-ksj" id="kt7-2L-rfn"/>
+                        <outlet property="textView" destination="JQo-XL-iWk" id="RDS-N9-RjL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
