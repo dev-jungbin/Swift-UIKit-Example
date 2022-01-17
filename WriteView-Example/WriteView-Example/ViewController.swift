@@ -30,6 +30,7 @@ class ViewController: UIViewController {
             view?.makeRounded(cornerRadius: 8)
             view?.layer.borderColor = UIColor.lightGray.cgColor
         }
+
     }
     @IBAction func tapChangeMajorBtn(_ sender: Any) {
         let optionMenu = UIAlertController(title: nil, message: "후기 작성 학과", preferredStyle: .actionSheet)
@@ -57,18 +58,7 @@ class ViewController: UIViewController {
 }
 extension ViewController: UITextViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if #available(iOS 13, *) {
-            (scrollView.subviews[(scrollView.subviews.count - 1)].subviews[0]).backgroundColor = .blue //verticalIndicator
-            (scrollView.subviews[(scrollView.subviews.count - 2)].subviews[0]).backgroundColor = .blue //horizontalIndicator
-        } else {
-            if let verticalIndicator: UIImageView = (scrollView.subviews[(scrollView.subviews.count - 1)] as? UIImageView) {
-                verticalIndicator.backgroundColor = .blue
-            }
-
-            if let horizontalIndicator: UIImageView = (scrollView.subviews[(scrollView.subviews.count - 2)] as? UIImageView) {
-                horizontalIndicator.backgroundColor = .blue
-            }
-        }
+        (scrollView.subviews[(scrollView.subviews.count - 1)].subviews[0]).backgroundColor = .blue // verticalIndicator
     }
 }
 
